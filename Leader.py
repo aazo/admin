@@ -1,7 +1,6 @@
 from flask import Flask
 from flask import request
 import requests
-import json
 @app.route('/')
 def owner():
     oii='Hi'
@@ -15,14 +14,12 @@ def tele():
     else:
         rq='Taken'
     data1={'data':rq,'status':'loaded','owner':'noelx'}
-    data_x=json.dumps(data1)
     try:
-        return data_x
+        return data1
     except:pass
 @app.route('/api/ip')
 def ip():
     ips=request.access_route[-1]
     data_ip={'ip':ips}
-    ij=json.dumps(data_ip)
-    return ij
+    return data_ip
 app.run(host='0.0.0.0',port='8080')
