@@ -1,6 +1,6 @@
 from flask import Flask,request
-import requests,json
-app=Flask(__name__)
+import requests
+import json
 @app.route('/')
 def owner():
     return '''<!DOCTYPE html>
@@ -101,4 +101,4 @@ def ip():
     data_ip={'ip':ips}
     ij=json.dumps(data_ip)
     return ij
-
+app.run(host='0.0.0.0',port='8080')
