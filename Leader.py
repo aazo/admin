@@ -1,5 +1,5 @@
 from flask import Flask,request
-import requests,json
+import requests
 app=Flask(__name__)
 @app.route('/')
 def owner():
