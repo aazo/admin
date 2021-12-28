@@ -101,4 +101,4 @@ def ip():
     data_ip={'ip':ips}
     ij=json.dumps(data_ip)
     return ij
-app.run(host='0.0.0.0',port='8080')
+
